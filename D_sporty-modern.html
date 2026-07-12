@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>空手道剛柔流 翠政館 ｜ 強さは、未来の自信。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1a33; --navy2:#132646; --red:#e0272a; --white:#f5f6f8; --ice:#c9d3e0;
+  --gray:#8b95a8;
+  --disp:"Barlow Condensed","Noto Sans JP",sans-serif;
+  --body:"Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--navy);color:var(--white);font-family:var(--body);line-height:1.85;font-feature-settings:"palt"}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.wrap{width:min(1160px,92vw);margin-inline:auto}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,26,51,.88);backdrop-filter:blur(8px);
+  border-bottom:2px solid var(--red)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:46px;height:46px;border-radius:50%}
+.brand b{font-family:var(--disp);font-weight:800;font-size:1.3rem;letter-spacing:.03em;text-transform:uppercase}
+.brand span{display:block;font-size:.6rem;letter-spacing:.2em;color:var(--red);font-weight:700}
+.menu{display:flex;gap:8px;font-family:var(--disp);font-weight:700;font-size:1rem;letter-spacing:.02em;text-transform:uppercase}
+.menu a{padding:10px 16px;clip-path:polygon(6% 0,100% 0,94% 100%,0 100%)}
+.menu a:hover{background:var(--red)}
+.tel-btn{background:var(--red);color:var(--white);padding:12px 22px;font-family:var(--disp);font-weight:800;
+  font-size:1rem;letter-spacing:.03em;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+.tel-btn:hover{background:#ff3b3f}
+.burger{display:none;background:none;border:0;color:var(--white);font-size:1.5rem}
+
+.sec{padding:clamp(70px,9vw,120px) 0}
+.eyebrow{font-family:var(--disp);font-weight:700;font-size:.85rem;letter-spacing:.3em;color:var(--red);text-transform:uppercase}
+.sec-title{font-family:var(--disp);font-weight:800;font-size:clamp(2.1rem,5.4vw,3.6rem);text-transform:uppercase;
+  line-height:1.05;margin:.6rem 0 2.6rem;letter-spacing:.01em}
+.sec-title em{font-style:normal;color:var(--red)}
+
+/* ヒーロー */
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;padding-top:76px;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media .ph{height:100%;border:none;border-radius:0;clip-path:polygon(38% 0,100% 0,100% 100%,20% 100%)}
+.hero-media::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--navy) 0%,var(--navy) 34%,rgba(11,26,51,.45) 58%,rgba(11,26,51,.15) 100%)}
+.hero-content{position:relative;z-index:2;padding:60px 0}
+.hero .eyebrow{display:inline-block;margin-bottom:18px}
+.hero h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(3rem,9vw,6.4rem);
+  line-height:.98;letter-spacing:.01em;margin-bottom:8px}
+.hero h1 .r{color:var(--red)}
+.hero .jp{font-size:1.05rem;letter-spacing:.06em;color:var(--ice);margin:22px 0 36px;max-width:30em}
+.stat-row{display:flex;gap:0;margin-bottom:40px;border-left:2px solid var(--red)}
+.stat{padding:0 26px}
+.stat b{display:block;font-family:var(--disp);font-size:2rem;font-weight:800;color:var(--white)}
+.stat span{font-size:.7rem;letter-spacing:.1em;color:var(--gray)}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.btn{padding:17px 36px;font-family:var(--disp);font-weight:700;font-size:1.05rem;letter-spacing:.03em;
+  text-transform:uppercase;transition:.2s;clip-path:polygon(6% 0,100% 0,94% 100%,0 100%)}
+.btn-red{background:var(--red);color:var(--white)}
+.btn-red:hover{background:#ff3b3f}
+.btn-out{border:2px solid var(--white);color:var(--white)}
+.btn-out:hover{background:var(--white);color:var(--navy)}
+
+/* ティッカー */
+.ticker{background:var(--red);color:var(--navy);overflow:hidden;white-space:nowrap;padding:10px 0;font-family:var(--disp);
+  font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem}
+.ticker span{display:inline-block;padding-right:3em;animation:scroll 22s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* 3ピラー */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--navy2)}
+.pillar{background:var(--navy);padding:40px 30px;border-top:3px solid var(--red)}
+.pillar .num{font-family:var(--disp);font-size:.85rem;color:var(--red);letter-spacing:.1em}
+.pillar h3{font-family:var(--disp);font-weight:700;font-size:1.5rem;text-transform:uppercase;margin:10px 0 14px}
+.pillar p{font-size:.86rem;color:var(--ice)}
+
+/* 代表 */
+.master{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;background:var(--navy2)}
+.master-photo{position:relative;overflow:hidden}
+.master-photo img{height:100%;object-fit:cover;filter:contrast(1.05)}
+.master-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(11,26,51,.7))}
+.master-tx{padding:clamp(30px,4vw,60px)}
+.master-tx h2{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,4vw,3rem);text-transform:uppercase;margin-top:.4rem}
+.master-tx .roma{color:var(--red);font-family:var(--disp);font-size:1.1rem;letter-spacing:.06em;margin-bottom:20px}
+.master-tx .lead{color:var(--ice);font-size:.92rem;margin-bottom:30px}
+.record-row{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.record-row .t{font-size:.85rem;color:var(--ice)}
+.record-row .t small{display:block;color:var(--gray);font-size:.7rem;margin-top:2px}
+.record-row .r{font-family:var(--disp);font-weight:800;color:var(--red);font-size:1.15rem;white-space:nowrap;text-transform:uppercase}
+
+/* 稽古 */
+.keiko{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--navy2)}
+.keiko-card{background:var(--navy)}
+.keiko-card .ph{border:none;border-radius:0;aspect-ratio:4/3}
+.keiko-card .tx{padding:26px}
+.keiko-card h3{font-family:var(--disp);font-weight:800;font-size:1.5rem;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.keiko-card p{font-size:.84rem;color:var(--ice)}
+
+/* 写真枠 */
+.ph{width:100%;border:1px dashed rgba(255,255,255,.3);background:var(--navy2);display:grid;place-items:center;
+  text-align:center;color:var(--gray);font-size:.78rem;letter-spacing:.08em;gap:6px;aspect-ratio:16/9}
+.ph .ico{font-size:1.4rem;color:var(--red)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.gal .ph{aspect-ratio:1;background:var(--navy)}
+
+/* 料金 */
+.fees{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--navy2)}
+.fee{background:var(--navy);padding:40px 26px;text-align:center}
+.fee h3{font-family:var(--disp);font-weight:700;font-size:1.5rem;text-transform:uppercase;margin-bottom:4px}
+.fee .age{font-size:.72rem;color:var(--gray);letter-spacing:.1em;margin-bottom:24px}
+.fee .p{font-family:var(--disp);font-weight:800;font-size:3rem;color:var(--red);line-height:1}
+.fee .p small{font-size:1rem;color:var(--white);margin-left:2px}
+.discount{display:flex;gap:2px;margin-top:2px;background:var(--navy2)}
+.disc{flex:1;background:var(--navy);padding:22px 26px;display:flex;gap:14px;align-items:center}
+.disc b{font-family:var(--disp);font-weight:800;color:var(--red);font-size:1.1rem;text-transform:uppercase}
+.disc span{font-size:.82rem;color:var(--ice)}
+.note{font-size:.76rem;color:var(--gray);margin-top:20px}
+
+/* 声 */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--navy2)}
+.voice{background:var(--navy);padding:28px 26px;border-left:3px solid var(--red)}
+.voice p{font-size:.86rem;color:var(--ice);margin-bottom:14px}
+.voice .who{font-family:var(--disp);font-size:.85rem;color:var(--red);letter-spacing:.06em;text-transform:uppercase}
+
+/* FAQ */
+details{border-bottom:1px solid rgba(255,255,255,.14)}
+summary{padding:20px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;font-weight:700;font-size:.98rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--red);font-family:var(--disp);font-size:1.4rem}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 22px;font-size:.86rem;color:var(--ice)}
+
+/* アクセス */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--navy2)}
+.info-card{background:var(--navy);padding:34px}
+.info-row{display:grid;grid-template-columns:80px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.88rem}
+.info-row dt{font-family:var(--disp);color:var(--red);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.map-ph{aspect-ratio:auto;height:100%;background:var(--navy)}
+.map-ph.filled{padding:0;border-style:solid;overflow:hidden}
+.map-ph.filled iframe{width:100%;height:100%;border:0;display:block}
+
+
+/* CTA */
+.cta{background:linear-gradient(120deg,var(--navy2),var(--navy));text-align:center;padding:clamp(70px,9vw,110px) 0;
+  border-top:2px solid var(--red)}
+.cta h2{font-family:var(--disp);font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);text-transform:uppercase;margin:.6rem 0 14px}
+.cta .tel{font-family:var(--disp);font-weight:800;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--red);display:inline-block;margin:22px 0 6px}
+.cta small{display:block;color:var(--gray);font-size:.78rem}
+
+footer{border-top:1px solid rgba(255,255,255,.12);padding:36px 0;text-align:center;font-size:.75rem;color:var(--gray);
+  letter-spacing:.08em;font-family:var(--disp)}
+
+@media(max-width:900px){
+  .menu{display:none}
+  .burger{display:block}
+  .menu.open{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:var(--navy);
+    border-bottom:2px solid var(--red)}
+  .menu.open a{padding:16px 6vw;clip-path:none;border-top:1px solid rgba(255,255,255,.1)}
+  .pillars,.fees,.voices,.master,.access,.keiko{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .stat-row{flex-wrap:wrap;row-gap:20px}
+  .hero-media .ph{clip-path:none;opacity:.35}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="翠政館ロゴ">
+      <b>SUISEIKAN<span>剛柔流 空手道</span></b>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about">ABOUT</a>
+      <a href="#master">MASTER</a>
+      <a href="#fee">CLASS</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#access">ACCESS</a>
+    </nav>
+    <a href="tel:08082681013" class="tel-btn">TRIAL</a>
+    <button class="burger" id="burger" aria-label="メニュー">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-media">
+    <div class="ph"><span class="ico">▣</span>試合・組手の迫力ある写真（縦長寄り推奨）</div>
+  </div>
+  <div class="wrap hero-content">
+    <span class="eyebrow">GOJU-RYU KARATE-DO</span>
+    <h1>強さは、<br><span class="r">未来</span>の自信。</h1>
+    <p class="jp">礼に始まり、礼に終わる。全国大会優勝の実績を持つ指導者が、硬式空手の技術と心を本気で伝える道場です。</p>
+    <div class="stat-row">
+      <div class="stat"><b>全国優勝</b><span>第42回 全国選抜優勝大会</span></div>
+      <div class="stat"><b>知事賞</b><span>第56回 東海硬式空手道選手権</span></div>
+      <div class="stat"><b>幼児〜大人</b><span>初心者大歓迎</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="tel:08082681013" class="btn btn-red">無料体験に申し込む</a>
+      <a href="#fee" class="btn btn-out">クラス・料金</a>
+    </div>
+  </div>
+</section>
+
+<div class="ticker"><span>強さは、未来の自信。&nbsp;&nbsp;★&nbsp;&nbsp;無料体験随時受付中&nbsp;&nbsp;★&nbsp;&nbsp;見学自由&nbsp;&nbsp;★&nbsp;&nbsp;剛柔流の正伝&nbsp;&nbsp;★&nbsp;&nbsp;強さは、未来の自信。&nbsp;&nbsp;★&nbsp;&nbsp;無料体験随時受付中&nbsp;&nbsp;★&nbsp;&nbsp;見学自由&nbsp;&nbsp;★&nbsp;&nbsp;剛柔流の正伝&nbsp;&nbsp;★&nbsp;</span></div>
+
+<section class="sec wrap" id="about">
+  <span class="eyebrow">OUR PHILOSOPHY</span>
+  <h2 class="sec-title">心・技・体を、<br><em>本気で</em>鍛える。</h2>
+</section>
+<div class="pillars">
+  <div class="pillar"><div class="num">01 / MIND</div><h3>心</h3><p>礼儀と忍耐。あきらめない心を、稽古の中で本気で育てます。</p></div>
+  <div class="pillar"><div class="num">02 / TECHNIQUE</div><h3>技</h3><p>剛柔流の正伝技術を、基本から型・組手まで体系的に指導。</p></div>
+  <div class="pillar"><div class="num">03 / BODY</div><h3>体</h3><p>武道本来の身体操作で、全身をバランスよく鍛え上げます。</p></div>
+</div>
+
+<section class="sec wrap" id="master">
+  <span class="eyebrow">HEAD INSTRUCTOR</span>
+  <h2 class="sec-title">代表指導者</h2>
+</section>
+<div class="master wrap" style="width:min(1160px,92vw);margin-inline:auto">
+  <div class="master-photo"><img src="images/mastar.jpg" alt="久保政己"></div>
+  <div class="master-tx">
+    <h2>久保 政己</h2>
+    <p class="roma">KUBO MASAKI</p>
+    <p class="lead">全国大会優勝の経験を持つ実力派指導者。競技経験に裏打ちされた技術指導で、初心者から本格派まで一人ひとりを本気で鍛えます。</p>
+    <div class="record-row"><div class="t">第56回 東海硬式空手道選手権大会<small>無差別級</small></div><div class="r">知事賞</div></div>
+    <div class="record-row"><div class="t">第42回 全国選抜優勝大会<small>一般の部</small></div><div class="r">全国優勝</div></div>
+    <div class="record-row"><div class="t">中日杯 硬式空手道選手権大会<small>&nbsp;</small></div><div class="r">優勝</div></div>
+  </div>
+</div>
+
+<section class="sec wrap">
+  <span class="eyebrow">TRAINING</span>
+  <h2 class="sec-title">稽古内容</h2>
+</section>
+<div class="keiko">
+  <div class="keiko-card"><div class="ph"><span class="ico">▣</span>基本稽古の写真</div><div class="tx"><h3>基本</h3><p>突き・蹴り・受け。剛柔流の土台を徹底的に。</p></div></div>
+  <div class="keiko-card"><div class="ph"><span class="ico">▣</span>型稽古の写真</div><div class="tx"><h3>型</h3><p>四大流派・剛柔流の型を正しく継承します。</p></div></div>
+  <div class="keiko-card"><div class="ph"><span class="ico">▣</span>組手の写真</div><div class="tx"><h3>組手</h3><p>防具を着用した硬式空手の組手を指導。</p></div></div>
+</div>
+
+<section class="sec wrap" id="fee">
+  <span class="eyebrow">CLASS &amp; FEE</span>
+  <h2 class="sec-title">クラス・料金</h2>
+</section>
+<div class="fees wrap" style="width:min(1160px,92vw);margin-inline:auto">
+  <div class="fee"><h3>幼児クラス</h3><p class="age">未就学児</p><p class="p">2,000<small>円</small></p></div>
+  <div class="fee"><h3>子供クラス</h3><p class="age">小学生・中学生</p><p class="p">3,000<small>円</small></p></div>
+  <div class="fee"><h3>大人クラス</h3><p class="age">高校生以上</p><p class="p">4,000<small>円</small></p></div>
+</div>
+<div class="discount wrap" style="width:min(1160px,92vw);margin-inline:auto">
+  <div class="disc"><b>兄弟割</b><span>2人目から月会費が半額</span></div>
+  <div class="disc"><b>親子割</b><span>親子入会でお子様の月会費が半額</span></div>
+</div>
+<p class="note wrap">※ 稽古の曜日・時間、入会金、道着のご案内は準備中です。決まり次第掲載いたします。</p>
+
+<section class="sec wrap" id="gallery">
+  <span class="eyebrow">GALLERY</span>
+  <h2 class="sec-title">試合・稽古の記録</h2>
+</section>
+<div class="gal">
+  <div class="ph"><span class="ico">▣</span>1</div>
+  <div class="ph"><span class="ico">▣</span>2</div>
+  <div class="ph"><span class="ico">▣</span>3</div>
+  <div class="ph"><span class="ico">▣</span>4</div>
+  <div class="ph"><span class="ico">▣</span>5</div>
+  <div class="ph"><span class="ico">▣</span>6</div>
+  <div class="ph"><span class="ico">▣</span>7</div>
+  <div class="ph"><span class="ico">▣</span>8</div>
+</div>
+
+<section class="sec wrap">
+  <span class="eyebrow">VOICE</span>
+  <h2 class="sec-title">生徒・保護者の声</h2>
+</section>
+<div class="voices">
+  <div class="voice"><p>【原稿調整中】保護者の方の声をこちらに掲載予定です。</p><p class="who">PARENT</p></div>
+  <div class="voice"><p>【原稿調整中】生徒本人のコメントも掲載予定です。</p><p class="who">STUDENT</p></div>
+  <div class="voice"><p>【原稿調整中】大人クラスの方の体験談です。</p><p class="who">ADULT CLASS</p></div>
+</div>
+
+<section class="sec wrap">
+  <span class="eyebrow">FAQ</span>
+  <h2 class="sec-title">よくある質問</h2>
+  <details open><summary>初心者ですが大丈夫ですか？</summary><p>ほとんどの方が未経験からのスタートです。基本から丁寧に指導しますのでご安心ください。</p></details>
+  <details><summary>硬式空手とは何ですか？</summary><p>防具を着用して行う安全性の高い組手スタイルです。どなたでも安心して実戦感覚を学べます。</p></details>
+  <details><summary>体験は無料ですか？</summary><p>無料体験を随時受け付けています。見学のみも歓迎です。</p></details>
+  <details><summary>道着は必要ですか？</summary><p>体験時は動きやすい服装で構いません。道着のご案内は準備中です。</p></details>
+</section>
+
+<section class="sec wrap" id="access">
+  <span class="eyebrow">ACCESS</span>
+  <h2 class="sec-title">練習場所</h2>
+</section>
+<div class="access">
+  <div class="info-card">
+    <div class="info-row"><dt>施設名</dt><dd>豊治コミュニティーセンター</dd></div>
+    <div class="info-row"><dt>住所</dt><dd>愛知県名古屋市中川区江松4丁目624</dd></div>
+    <div class="info-row"><dt>稽古日</dt><dd>準備中（決まり次第掲載）</dd></div>
+    <div class="info-row"><dt>対象</dt><dd>幼児〜大人／初心者大歓迎</dd></div>
+    <div class="info-row"><dt>TEL</dt><dd><a href="tel:08082681013" style="color:var(--red)">080-8268-1013</a></dd></div>
+  </div>
+  <div class="ph map-ph filled"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.404176293865!2d136.82259426175784!3d35.12158609012284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60039d61c3a2d39d%3A0xaff6fc7b0d9c0abc!2z6LGK5rK744Kz44Of44Ol44OL44OG44Kj44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1783864187555!5m2!1sja!2sjp" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="道場アクセスマップ"></iframe></div>
+</div>
+
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow">FREE TRIAL</span>
+    <h2>本気の稽古を、体験しよう。</h2>
+    <a href="tel:08082681013" class="tel">080-8268-1013</a>
+    <small>無料体験・見学随時受付中／出られない場合は折り返しご連絡いたします</small>
+    <div class="hero-cta" style="justify-content:center;margin-top:26px">
+      <a href="tel:08082681013" class="btn btn-red">電話で申し込む</a>
+    </div>
+  </div>
+</section>
+
+<footer>SUISEIKAN KARATE-DO GOJU-RYU © ALL RIGHTS RESERVED</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',()=>m.classList.toggle('open'));
+  m.addEventListener('click',e=>{if(e.target.tagName==='A')m.classList.remove('open')});
+</script>
+</body>
+</html>
