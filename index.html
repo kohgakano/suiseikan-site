@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>翠政館 HP デザイン案 比較</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Noto Sans JP', sans-serif;
+    background: #16181d;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+  }
+  .wrap { max-width: 980px; width: 100%; }
+  h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+  .sub { color: #999; margin-bottom: 2.5rem; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .card {
+    display: block; padding: 1.8rem; border-radius: 14px;
+    text-decoration: none; color: #fff;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.3); }
+  .card .tag { font-size: 0.75rem; letter-spacing: 0.15em; opacity: 0.7; margin-bottom: 0.6rem; display: block; }
+  .card h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .card p { font-size: 0.88rem; opacity: 0.85; line-height: 1.6; }
+  .c1 { background: linear-gradient(160deg, #1b1917, #0e0d0c); }
+  .c2 { background: linear-gradient(160deg, #17171c, #101014); border-color: rgba(255,43,61,0.3); }
+  .c3 { background: linear-gradient(160deg, #fffaf0, #ffe9b3); color: #0d3a8c; }
+  .c3 p { color: #0d3a8c; opacity: 0.75; }
+  .c4 { background: linear-gradient(160deg, #fff3d6, #ffe3ad); color: #4e342e; }
+  .c4 p { color: #4e342e; opacity: 0.75; }
+  .c5 { background: linear-gradient(160deg, #f7f4ee, #e7eee9); color: #14324f; grid-column: 1 / -1; }
+  .c5 p { color: #14324f; opacity: 0.75; }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } .c5 { grid-column: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>空手道剛柔流 翠政館 &mdash; デザイン案比較</h1>
+  <p class="sub">5つの方向性を試作しました。クリックしてご覧ください。</p>
+  <div class="grid">
+    <a class="card c1" href="cool-1-traditional/index.html">
+      <span class="tag">カッコイイ系 ①</span>
+      <h2>重厚・和モダン</h2>
+      <p>黒×金の重厚な世界観。毛筆の一筆書きアニメーションと縦書きの理念が特徴。</p>
+    </a>
+    <a class="card c2" href="cool-2-sporty/index.html">
+      <span class="tag">カッコイイ系 ②</span>
+      <h2>格闘技イベント風</h2>
+      <p>試合ポスターのようなダイナミックなデザイン。戦績のカウントアップ演出。</p>
+    </a>
+    <a class="card c3" href="kids-1-clean/index.html">
+      <span class="tag">子供向け ①</span>
+      <h2>元気ポップ(クリーン)</h2>
+      <p>明るい丸ゴシックとレベルアップの道。アプリのような親しみやすさ。</p>
+    </a>
+    <a class="card c4" href="kids-2-craft/index.html">
+      <span class="tag">子供向け ②</span>
+      <h2>元気ポップ(手描き工作風)</h2>
+      <p>マスキングテープとスタンプカードで、学級だよりのような手作り感。</p>
+    </a>
+    <a class="card c5" href="trust-1-parents/index.html">
+      <span class="tag">保護者の信頼系</span>
+      <h2>あんしん・誠実</h2>
+      <p>紺×セージグリーンの落ち着いたトーン。資格・実績を伝える「安心ポイント」チェックリストとFAQで、入会を検討する保護者の不安に応える一枚。</p>
+    </a>
+  </div>
+</div>
+</body>
+</html>
