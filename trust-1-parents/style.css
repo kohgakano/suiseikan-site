@@ -67,11 +67,11 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Hero ---------- */
 .hero { min-height: 100vh; display: flex; align-items: center; padding: 6.5rem 6vw 3rem; }
-.hero-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center; }
+.hero-inner { max-width: 720px; margin: 0 auto; text-align: center; }
 .hero-eyebrow { color: var(--sage); font-weight: 700; margin-bottom: 0.8rem; letter-spacing: 0.1em; }
 .hero-title { font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1.4; }
-.hero-copy { margin: 1.4rem 0 1.6rem; color: var(--text-soft); font-size: 1.02rem; max-width: 46ch; }
-.trust-badges { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 2.2rem; }
+.hero-copy { margin: 1.4rem auto 1.6rem; color: var(--text-soft); font-size: 1.02rem; max-width: 46ch; }
+.trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; margin-bottom: 2.2rem; }
 .trust-badges span { background: var(--white); border: 1px solid rgba(79,122,108,0.3); color: var(--sage); font-size: 0.82rem; font-weight: 700; padding: 0.5rem 1rem; border-radius: 999px; }
 .btn-primary {
   display: inline-block; background: var(--apricot); color: var(--white);
@@ -80,10 +80,6 @@ img { max-width: 100%; display: block; }
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(226,121,90,0.35); }
-
-.hero-photo { text-align: center; }
-.hero-photo img { border-radius: 16px; box-shadow: 0 20px 50px rgba(20,50,79,0.18); }
-.hero-photo-caption { margin-top: 1rem; font-size: 0.88rem; color: var(--text-soft); font-weight: 500; }
 
 /* ---------- Trust checklist ---------- */
 .points { padding: 6rem 6vw; max-width: 940px; margin: 0 auto; }
@@ -190,9 +186,6 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; text-align: center; }
-  .hero-photo { order: -1; max-width: 320px; margin: 0 auto; }
-  .trust-badges { justify-content: center; }
   .sensei-inner { grid-template-columns: 1fr; }
   .sensei-photo-wrap { max-width: 280px; margin: 0 auto; }
   .access-inner { grid-template-columns: 1fr; }
